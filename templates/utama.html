@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block menu %}Utama{%endblock%}
+{% block content %}
+
+<div class="row">
+
+    <div class="col-lg-6">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>{{ message }}</strong>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form action="" method="post" novalidate>
+
+        
+            <div class="form-group">
+                <label>Tekanan Darah</label>
+                <input type="text" name="tekanan-darah" class="form-control" placeholder="1 - 200">
+            </div>
+            <div class="form-group">
+                <label>Gula Darah</label>
+                <input type="text" name="gula-darah" class="form-control" placeholder="1 - 200">
+            </div>
+            <div class="form-group">
+                <label>Kolesterol</label>
+                <input type="text" name="kolesterol" class="form-control" placeholder="1 - 300">
+            </div>
+            <div class="form-group">
+                <label>Body Mass Index</label>
+                <input type="text" name="bmi" class="form-control" placeholder="1 - 30">
+            </div>
+            <div class="form-group">
+                <label>Riwayat</label>
+                <select name="riwayat" class="form-control">
+                    <option value="">Ada / Tidak</option>
+                    <option value="1">Ada</option>
+                    <option value="0.1">Tidak</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-danger btn-block"> <i class="fa fa-search"></i> Periksa</button>
+        </form>
+    </div>
+    <div class="col-lg-6">
+        <tbody>
+            {% for dt in data %}
+            <tr>
+                {{ dt|safe }}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </div>
+</div>
+{% endblock %}
