@@ -9,9 +9,6 @@ Install Flask
 
 *pip install Flask*
 
-Instal Flask-wtf
-
-*pip install flask-wtf*
 
 # Get app secret
 - Open cmd
