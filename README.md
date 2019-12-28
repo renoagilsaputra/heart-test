@@ -15,7 +15,7 @@ Instal Flask-wtf
 
 # Get app secret
 - Open cmd
-* python
+- Open python
 
 *import secrets*
 
