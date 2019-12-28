@@ -15,7 +15,8 @@ Instal Flask-wtf
 
 # Get app secret
 - Open cmd
-- > python
+> python
+
 *import secrets*
 
 *secrets.token_hex(16)*
