@@ -9,5 +9,9 @@ Install Flask
 
 *pip install Flask*
 
+Instal Flask-wtf
+
+*pip install flask-wtf*
+
 # How to Run
-*flask run*
+*python app.py*
