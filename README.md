@@ -18,7 +18,7 @@ Install Flask
 
 *secrets.token_hex(16)*
 
-- Copy to app.secret()
+- Copy token to *app.secre = 'token'*
 
 # How to Run
 *python app.py*
